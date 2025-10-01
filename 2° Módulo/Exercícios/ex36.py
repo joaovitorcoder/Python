@@ -10,9 +10,9 @@ anos = int(input('Em quantos anos você vai pagar a casa?'))
 
 anosCalculado = anos * 12
 
-salarioCalculado = salario * 0.30 # calcula os 30% do salario
+salarioCalculado = salario * 0.30
 
-prestacao_mensal = anosCalculado / salarioCalculado
+prestacao_mensal = ValorDaCasa / anosCalculado
 
 if prestacao_mensal > salarioCalculado:
     print('Empréstimo negado')
