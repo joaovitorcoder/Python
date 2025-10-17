@@ -8,14 +8,12 @@ ValorDaCasa = float(input('Qual o valor da casa?'))
 salario = float(input('Qual o valor do seu salário?'))
 anos = int(input('Em quantos anos você vai pagar a casa?'))
 
-anosCalculado = anos * 12
+prestacao_mensal = ValorDaCasa / (anos * 12)
 
-salarioCalculado = salario * 0.30
+print('A prestação será de R${:.2f}'.format(prestacao_mensal))
 
-prestacao_mensal = ValorDaCasa / anosCalculado
-
-if prestacao_mensal > salarioCalculado:
-    print('Empréstimo negado')
+if prestacao_mensal <= (salario * 0.30):
+    print('Empréstimo pode ser CONCEDIDO!')
 else:
-    print('Empréstimo aprovado')
+    print('Empréstimo NEGADO')
 
