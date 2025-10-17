@@ -11,6 +11,8 @@ if escolha == 1:
 elif escolha == 2:
     octal = oct(num)[2:]
     print('Seu número em octal: {}'.format(octal))
-else:
-    hexadecimal = hex(num)
+elif escolha == 3:
+    hexadecimal = hex(num)[2:]
     print('Seu número em hexadecimal: {}'.format(hexadecimal))
+else:
+    print('Escolha invalida, tente novamente')
