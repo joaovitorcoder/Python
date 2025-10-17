@@ -2,7 +2,18 @@
 
 from random import randint
 
-escolha = input('Você escolhe pedra, papel ou tesoura: ')
+escolha = input('Você escolhe pedra, papel ou tesoura: \n'
+                '[ 1 ] Pedra \n'
+                '[ 2 ] Papel\n'
+                '[ 3 ] Tesoura\n'
+                'Sua escolha: ')
+if escolha == '1':
+    escolha = 'pedra'
+elif escolha == '2':
+    escolha = 'papel'
+else:
+    escolha = 'tesoura'
+
 nAleatorio = randint(1, 3)
 if nAleatorio == 1:
     escolhaPC = 'pedra'
