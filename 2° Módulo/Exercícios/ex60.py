@@ -2,8 +2,7 @@
 
 num = int(input('Digite um numero: '))
 fatorial = 1
-temp = num
-
+temp = num  
 while temp > 0:
     fatorial *= temp
     temp -= 1
