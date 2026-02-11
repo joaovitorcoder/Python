@@ -1,6 +1,6 @@
 #fazer um programa que leia um numero qualquer e mostre na tela seu fatorial
 
-num = int(input('Digite um numero: '))
+num = int(input('Digite o numero para ser calculado o fatorial: '))
 fatorial = 1
 temp = num
 while temp > 0:
