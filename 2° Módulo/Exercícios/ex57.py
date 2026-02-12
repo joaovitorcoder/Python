@@ -2,7 +2,7 @@
 
 sexo = 'J'
 while sexo != 'M' and sexo != 'F':
-    sexo = input('Digite o seu sexo [M/F]: ').upper()
+    sexo = input('Digite o seu sexo [M/F]: ').upper().replace(' ', '')[0]
 
 if sexo == 'F':
     sexo = 'Feminino'
