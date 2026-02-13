@@ -15,8 +15,7 @@ while endPoint == 'S':
     if n < menor:
         menor = n
     media = soma / vezesRodadas
-    if vezesRodadas >= 10:
-        endPoint = input('Voce deseja continuar a rodar o programa [S/N]: ').upper()
+    endPoint = input('Voce deseja continuar a rodar o programa [S/N]: ').upper()
 
 print('A média entre todos os valores digitados foi de {}\nO menor foi valor foi {}\n'
       'O maior valor foi {}'.format(media, menor, maior))

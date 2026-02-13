@@ -3,7 +3,7 @@
 a = prox = 0
 b = 1
 contador  = 0
-n = int(input('Digite um numero inteiro: '))
+n = int(input('Quantos termos você quer exibir: '))
 while contador != n:
 
     print(a)
