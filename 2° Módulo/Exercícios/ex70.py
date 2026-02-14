@@ -1,30 +1,29 @@
-#crie um programa que leia a idade e o sexo de várias pessoas, a cada pessoa cadastrada, o programa deverá perguntar se o usuário quer ou
+#crie um programa que leia o nome e o preço de vários produtos, o programa deverá perguntar se o usuário quer ou
 #não continuar,no final, mostre:
-# - quantidade de pessoas que tem mais de 18 anos
-# - quantos homens foram cadastrados
-# - quantas mulheres tem menos de 20 anos
-pessoasMaiores = quantidadeHomens = mulheresMenosDe20 = 0
-
+# - Qual o total gasto na compra
+# - Quantos produtos custam mais de R$1000
+# - Qual é o nome do produto mais barato
+total = produtosMaioresde1000 = 0
+produtoMaisCaro = 99999
 print('-'*30)
-print('     CADASTRO DE PESSOAS     ')
+print('     CADASTRO DE PRODUTOS     ')
 print('-'*30)
 
 while True:
-    idade = int(input('Insira a idade: '))
-    sexo = input('Insira o sexo [M/F]: ').lower().replace(' ', '')[0]
+    nomeProduto = input('Qual o nome do produto: ').replace(' ', '').capitalize()
+    precoProduto = float(input('Qual o valor do produto: '))
 
-    if idade > 18:
-        pessoasMaiores += 1
-    if sexo == 'm':
-        quantidadeHomens += 1
-    if sexo == 'f' and idade < 20:
-        mulheresMenosDe20 += 1
+    total += precoProduto
+    if precoProduto > 1000:
+        produtosMaioresde1000 += 1
+    if precoProduto < produtoMaisCaro:
+        produtoMaisCaro = precoProduto
+        nomeProdutoMaisBarato = nomeProduto
 
-    resp = input('Quer continuar? [S/N]').lower().replace(' ', '')[0]
-
+    resp = str(input('Quer continuar? [S/N] ')).replace(' ', '').lower()[0]
     if resp == 'n':
         break
 
-print(f'Quantidade de pessoas maiores de 18: {pessoasMaiores}')
-print(f'Quantidade de homens cadastrados: {quantidadeHomens}')
-print(f'Quantidade de mulheres menores de 20: {mulheresMenosDe20}')
+print(f'Total dos produtos: {total}')
+print(f'Qunatidade de produtos maiores de R$ 1000: {produtosMaioresde1000}')
+print(f'O nome do produto mais barato é: {nomeProdutoMaisBarato}')
