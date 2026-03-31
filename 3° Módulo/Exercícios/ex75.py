@@ -1,3 +1,6 @@
+#vai ler quatro numeros vai mostrar os quatros, vai retonar quantos noves tem, em qual posição apareceu o primeiro 3 e em os numeros pares
+#digitados
+
 numeros = []
 contador = primeiro3 = 0
 for c in range(4):
