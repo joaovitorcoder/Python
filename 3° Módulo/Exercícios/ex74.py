@@ -1,21 +1,15 @@
 from random import randint
-numeros = []
-
-for i in range(5):
-    numeros.append(randint(1, 10))
-tuplaNumeros = tuple(numeros) #transforma em tupla
-del(numeros)
-menor = tuplaNumeros[0]
-maior = tuplaNumeros[-1]
-
-for j in tuplaNumeros:
-    if j < menor:
-        menor = j
-    if j > maior:
-        maior = j
+numeros = (
+    randint(1, 10),
+    randint(1, 10),
+    randint(1, 10),
+    randint(1, 10),
+    randint(1, 10)
+)
 
 print(f'Os valores sorteados foram: ', end='')
-for i in tuplaNumeros:
-    print(f'{i} ', end='')
-print(f'\nO maior valor sorteado foi: {maior}')
-print(f'O menor valor sorteado foi: {menor}')
+for n in numeros:
+    print(f'{n} ', end='')
+
+print(f'\nO maior valor sorteado foi {max(numeros)}')
+print(f'O menor valor sorteado foi {min(numeros)}')
