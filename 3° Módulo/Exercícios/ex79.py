@@ -10,12 +10,15 @@ while True:
 
     if valorDigitado not in valores:
         valores.append(valorDigitado)
+        print(f'Adicionando o valor {valorDigitado}')
     else:
         print('Valor duplo! Não irei adicionar!')
 
     res = input('Deseja continuar? [S/N] ').strip().lower()
     if res == 'n':
         break
+
+valores.sort()
 
 print('-'*40)
 
