@@ -16,8 +16,8 @@ print()
 
 # printando os valores da matriz
 
-soma_valores = 0
-somaValoresTerceiraColuna = 0
+somaValoresPares = 0
+somaColuna3 = 0
 maiorValor = 0
 
 for linha in range(len(matriz)):
@@ -28,18 +28,19 @@ for linha in range(len(matriz)):
     for coluna in range(len(matriz[linha])):
 
         if matriz[linha][coluna] % 2 == 0:
-            soma_valores += matriz[linha][coluna]
+            somaValoresPares += matriz[linha][coluna]
 
         print(f'[{matriz[linha][coluna]:^3}]', end='')
 
         if coluna == 2:
-            somaValoresTerceiraColuna += matriz[linha][coluna]
+            somaColuna3 += matriz[linha][coluna]
 
     print()
 
 print('-' * 80)
 
-print(f'A soma de todos os valores pares da matriz é de: {soma_valores}')
-print(f'A soma dos valores da terceira coluna é de: {somaValoresTerceiraColuna}')
+if somaValoresPares:
+    print(f'A soma de todos os valores pares da matriz é de: {somaValoresPares}')
+print(f'A soma dos valores da terceira coluna é de: {somaColuna3}')
 print(f'O maior valor da segunda linha é de: {maiorValor}')
 
