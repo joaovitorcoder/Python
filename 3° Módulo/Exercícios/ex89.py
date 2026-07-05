@@ -11,16 +11,13 @@ while True:
     nota2 = float(input('Informe a segunda nota: '))
     media = (nota1 + nota2) / 2
 
-    valores.append(nome)
-    valores.append(nota1)
-    valores.append(nota2)
-    valores.append(media)
+    valores = [nome, nota1, nota2, media]
 
     alunos.append(valores[:])
     valores.clear()
 
     resp = input('Deseja cadastrar outro aluno? [S/N] ').upper()[0]
-    if resp == 'N':
+    if resp == 'N': 
         break
 
 print()
@@ -38,8 +35,12 @@ while True:
 
     if boletim == 999:
         break
+
     boletim -= 1
     if 0 <= boletim < len(alunos):
-        print(alunos[boletim])
+        print(f'Nome: {alunos[boletim][0]}')
+        print(f'Nota 1: {alunos[boletim][1]}')
+        print(f'Nota 2: {alunos[boletim][2]}')
+        print(f'Média: {alunos[boletim][3]}')
     else:
         print('Indice invalido')
