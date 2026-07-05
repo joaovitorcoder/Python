@@ -1,2 +1,2 @@
 # Python
-Curso de Python - CursoemVideo
+- Curso de Python - CursoemVideo
